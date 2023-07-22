@@ -1,0 +1,161 @@
+[
+  {
+    "name": "Vpunks Weapons",
+    "id": 2,
+    "codename": "vpunks-weapons",
+    "standard": "Weapons",
+    "baseUrl": "https://vpunks.com/images/",
+    "items": [
+      {
+        "id": 0,
+        "name": "AXE",
+        "img": "axe-lv1.jpg",
+        "attributes": {
+          "Level": "1",
+          "Element": "Water"
+        },
+        "rank": "100"
+      },
+      {
+        "id": 1,
+        "name": "AXE",
+        "img": "axe-lv2.jpg",
+        "attributes": {
+          "Level": "2",
+          "Element": "Water"
+        },
+        "rank": "250"
+      },
+      {
+        "id": 2,
+        "name": "AXE",
+        "img": "axe-lv3.jpg",
+        "attributes": {
+          "Level": "3",
+          "Element": "Water"
+        },
+        "rank": "30"
+      },
+      {
+        "id": 3,
+        "name": "Nunchaku",
+        "img": "nunchaku-lv1.jpg",
+        "attributes": {
+          "Level": "1",
+          "Element": "Metal"
+        },
+        "rank": "40"
+      },
+      {
+        "id": 4,
+        "name": "Nunchaku",
+        "img": "nunchaku-lv2.jpg",
+        "attributes": {
+          "Level": "2",
+          "Element": "Metal"
+        },
+        "rank": "50"
+      },
+      {
+        "id": 5,
+        "name": "Nunchaku",
+        "img": "nunchaku-lv3.jpg",
+        "attributes": {
+          "Level": "3",
+          "Element": "Metal"
+        },
+        "rank": "60"
+      },
+      {
+        "id": 6,
+        "name": "Spear",
+        "img": "spear-lv1.jpg",
+        "attributes": {
+          "Level": "1",
+          "Element": "Wood"
+        },
+        "rank": "70"
+      },
+      {
+        "id": 7,
+        "name": "Spear",
+        "img": "spear-lv2.jpg",
+        "attributes": {
+          "Level": "2",
+          "Element": "Wood"
+        },
+        "rank": "80"
+      },
+      {
+        "id": 8,
+        "name": "Spear",
+        "img": "spear-lv3.jpg",
+        "attributes": {
+          "Level": "3",
+          "Element": "Wood"
+        },
+        "rank": "90"
+      },
+      {
+        "id": 9,
+        "name": "Sword",
+        "img": "sword-lv1.jpg",
+        "attributes": {
+          "Level": "1",
+          "Element": "Fire"
+        },
+        "rank": "100"
+      },
+      {
+        "id": 10,
+        "name": "Sword",
+        "img": "sword-lv2.jpg",
+        "attributes": {
+          "Level": "2",
+          "Element": "Fire"
+        },
+        "rank": "100"
+      },
+      {
+        "id": 11,
+        "name": "Sword",
+        "img": "sword-lv3.jpg",
+        "attributes": {
+          "Level": "3",
+          "Element": "Fire"
+        },
+        "rank": "100"
+      },
+      {
+        "id": 12,
+        "name": "Cub",
+        "img": "cub-lv1.jpg",
+        "attributes": {
+          "Level": "1",
+          "Element": "Earth"
+        },
+        "rank": "100"
+      },
+      {
+        "id": 13,
+        "name": "Cub",
+        "img": "cub-lv2.jpg",
+        "attributes": {
+          "Level": "2",
+          "Element": "Earth"
+        },
+        "rank": "100"
+      },
+      {
+        "id": 14,
+        "name": "Cub",
+        "img": "cub-lv3.jpg",
+        "attributes": {
+          "Level": "3",
+          "Element": "Earth"
+        },
+        "rank": "100"
+      }
+    ]
+  }
+]

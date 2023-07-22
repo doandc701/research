@@ -1,0 +1,189 @@
+{
+  "name": "Vpunks Weapons",
+  "id": 2,
+  "codename": "vpunks-weapons",
+  "standard": "Weapons",
+  "baseUrl": "https://vpunks.com/images/",
+  "items": [
+    {
+      "id": 1,
+      "name": "AXE",
+      "codename": "axe",
+      "img": "axe-lv1.jpg",
+      "imgnonebg": "axe-water-lv1-nonebg.png",
+      "attributes": {
+        "Level": "1",
+        "Element": "Water"
+      },
+      "rank": ""
+    },
+    {
+      "id": 2,
+      "name": "AXE",
+      "codename": "axe",
+      "img": "axe-lv2.jpg",
+      "imgnonebg": "axe-water-lv2-nonebg.png",
+      "attributes": {
+        "Level": "2",
+        "Element": "Water"
+      },
+      "rank": ""
+    },
+    {
+      "id": 3,
+      "name": "AXE",
+      "codename": "axe",
+      "img": "axe-lv3.jpg",
+      "imgnonebg": "axe-water-lv3-nonebg.png",
+      "attributes": {
+        "Level": "3",
+        "Element": "Water"
+      },
+      "rank": ""
+    },
+    {
+      "id": 4,
+      "name": "Nunchaku",
+      "codename": "nunchaku",
+      "img": "nunchaku-lv1.jpg",
+      "imgnonebg": "nunchaku-lv1-nonebg.png",
+      "attributes": {
+        "Level": "1",
+        "Element": "Metal"
+      },
+      "rank": ""
+    },
+    {
+      "id": 5,
+      "name": "Nunchaku",
+      "codename": "nunchaku",
+      "img": "nunchaku-lv2.jpg",
+      "imgnonebg": "nunchaku-lv2-nonebg.png",
+      "attributes": {
+        "Level": "2",
+        "Element": "Metal"
+      },
+      "rank": ""
+    },
+    {
+      "id": 6,
+      "name": "Nunchaku",
+      "codename": "nunchaku",
+      "img": "nunchaku-lv3.jpg",
+      "imgnonebg": "nunchaku-lv3-nonebg.png",
+      "attributes": {
+        "Level": "3",
+        "Element": "Metal"
+      },
+      "rank": ""
+    },
+    {
+      "id": 7,
+      "name": "Spear",
+      "codename": "spear",
+      "img": "spear-lv1.jpg",
+      "imgnonebg": "spear-wood-lv1-nonebg.png",
+      "attributes": {
+        "Level": "1",
+        "Element": "Wood"
+      },
+      "rank": ""
+    },
+    {
+      "id": 8,
+      "name": "Spear",
+      "codename": "spear",
+      "img": "spear-lv2.jpg",
+      "imgnonebg": "spear-wood-lv2-nonebg.png",
+      "attributes": {
+        "Level": "2",
+        "Element": "Wood"
+      },
+      "rank": ""
+    },
+    {
+      "id": 9,
+      "name": "Spear",
+      "codename": "spear",
+      "img": "spear-lv3.jpg",
+      "imgnonebg": "spear-wood-lv3-nonebg.png",
+      "attributes": {
+        "Level": "3",
+        "Element": "Wood"
+      },
+      "rank": ""
+    },
+    {
+      "id": 10,
+      "name": "Sword",
+      "codename": "sword",
+      "img": "sword-lv1.jpg",
+      "imgnonebg": "fire-sword-lv1-nonebg.png",
+      "attributes": {
+        "Level": "1",
+        "Element": "Fire"
+      },
+      "rank": ""
+    },
+    {
+      "id": 11,
+      "name": "Sword",
+      "codename": "sword",
+      "img": "sword-lv2.jpg",
+      "imgnonebg": "fire-sword-lv2-nonebg.png",
+      "attributes": {
+        "Level": "2",
+        "Element": "Fire"
+      },
+      "rank": ""
+    },
+    {
+      "id": 12,
+      "name": "Sword",
+      "codename": "sword",
+      "img": "sword-lv3.jpg",
+      "imgnonebg": "fire-sword-lv3-nonebg.png",
+      "attributes": {
+        "Level": "3",
+        "Element": "Fire"
+      },
+      "rank": ""
+    },
+    {
+      "id": 13,
+      "name": "Cub",
+      "codename": "cub",
+      "img": "cub-lv1.jpg",
+      "imgnonebg": "cub-earth-lv1-nonebg.png",
+      "attributes": {
+        "Level": "1",
+        "Element": "Earth"
+      },
+      "rank": ""
+    },
+    {
+      "id": 14,
+      "name": "Cub",
+      "codename": "cub",
+      "img": "cub-lv2.jpg",
+      "imgnonebg": "cub-earth-lv2-nonebg.png",
+      "attributes": {
+        "Level": "2",
+        "Element": "Earth"
+      },
+      "rank": ""
+    },
+    {
+      "id": 15,
+      "name": "Cub",
+      "codename": "cub",
+      "img": "cub-lv3.jpg",
+      "imgnonebg": "cub-earth-lv3-nonebg.png",
+      "attributes": {
+        "Level": "3",
+        "Element": "Earth"
+      },
+      "rank": ""
+    }
+  ]
+}

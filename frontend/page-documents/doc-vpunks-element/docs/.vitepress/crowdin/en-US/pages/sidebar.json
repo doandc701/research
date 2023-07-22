@@ -1,0 +1,17 @@
+[
+  {
+    "text": "Guide",
+    "link": "/guide/overview",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "Component",
+    "link": "/component/vpunks",
+    "activeMatch": "/component/"
+  },
+  {
+    "text": "Resource",
+    "link": "/resource/index",
+    "activeMatch": "/resource/"
+  }
+]

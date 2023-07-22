@@ -1,0 +1,19 @@
+{
+    "inputs": [
+        {
+            "internalType": "string",
+            "name": "nameString",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "affCode",
+            "type": "string"
+        }
+    ],
+    "name": "registerNameXName",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function",
+    "payable": true
+}

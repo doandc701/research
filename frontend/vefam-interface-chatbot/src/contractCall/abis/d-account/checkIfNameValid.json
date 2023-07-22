@@ -1,0 +1,20 @@
+{
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "nameString",
+        "type": "string"
+      }
+    ],
+    "name": "checkIfNameValid",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  }

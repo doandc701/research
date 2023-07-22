@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "AXE",
+    "img": "axe-lv1.jpg",
+    "attributes": {
+      "Level": "1",
+      "Element": "Water"
+    },
+    "rank": ""
+  },
+  {
+    "id": 2,
+    "name": "AXE",
+    "img": "axe-lv2.jpg",
+    "attributes": {
+      "Level": "2",
+      "Element": "Water"
+    },
+    "rank": ""
+  },
+  {
+    "id": 3,
+    "name": "AXE",
+    "img": "axe-lv3.jpg",
+    "attributes": {
+      "Level": "3",
+      "Element": "Water"
+    },
+    "rank": ""
+  },
+  {
+    "id": 4,
+    "name": "Nunchaku",
+    "img": "nunchaku-lv1.jpg",
+    "attributes": {
+      "Level": "1",
+      "Element": "Metal"
+    },
+    "rank": ""
+  },
+  {
+    "id": 5,
+    "name": "Nunchaku",
+    "img": "nunchaku-lv2.jpg",
+    "attributes": {
+      "Level": "2",
+      "Element": "Metal"
+    },
+    "rank": ""
+  },
+  {
+    "id": 6,
+    "name": "Nunchaku",
+    "img": "nunchaku-lv3.jpg",
+    "attributes": {
+      "Level": "3",
+      "Element": "Metal"
+    },
+    "rank": ""
+  },
+  {
+    "id": 7,
+    "name": "Spear",
+    "img": "spear-lv1.jpg",
+    "attributes": {
+      "Level": "1",
+      "Element": "Wood"
+    },
+    "rank": ""
+  },
+  {
+    "id": 8,
+    "name": "Spear",
+    "img": "spear-lv2.jpg",
+    "attributes": {
+      "Level": "2",
+      "Element": "Wood"
+    },
+    "rank": ""
+  },
+  {
+    "id": 9,
+    "name": "Spear",
+    "img": "spear-lv3.jpg",
+    "attributes": {
+      "Level": "3",
+      "Element": "Wood"
+    },
+    "rank": ""
+  },
+  {
+    "id": 10,
+    "name": "Sword",
+    "img": "sword-lv1.jpg",
+    "attributes": {
+      "Level": "1",
+      "Element": "Fire"
+    },
+    "rank": ""
+  },
+  {
+    "id": 11,
+    "name": "Sword",
+    "img": "sword-lv2.jpg",
+    "attributes": {
+      "Level": "2",
+      "Element": "Fire"
+    },
+    "rank": ""
+  },
+  {
+    "id": 12,
+    "name": "Sword",
+    "img": "sword-lv3.jpg",
+    "attributes": {
+      "Level": "3",
+      "Element": "Fire"
+    },
+    "rank": ""
+  },
+  {
+    "id": 13,
+    "name": "Cub",
+    "img": "cub-lv1.jpg",
+    "attributes": {
+      "Level": "1",
+      "Element": "Earth"
+    },
+    "rank": ""
+  },
+  {
+    "id": 14,
+    "name": "Cub",
+    "img": "cub-lv2.jpg",
+    "attributes": {
+      "Level": "2",
+      "Element": "Earth"
+    },
+    "rank": ""
+  },
+  {
+    "id": 15,
+    "name": "Cub",
+    "img": "cub-lv3.jpg",
+    "attributes": {
+      "Level": "3",
+      "Element": "Earth"
+    },
+    "rank": ""
+  }
+]

@@ -1,0 +1,396 @@
+@font-face {
+  font-family: Barlow;
+  src: url(../assets/fonts/Barlow-Regular.ttf);
+}
+
+// variables ----------------------------------------
+$bgSubMenu: #161719;
+$bgColorType01: #1f2128; // dùng cho: el-dropdown-menu, el-dialog
+$borderColorType01: #1f2128; // dùng cho: el-dropdown-menu, el-dialog
+// end: variables ----------------------------------------
+
+.el-loading-mask {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+// el-dropdown-menu ----------------------------------------
+.el-dropdown-menu.dropdown-type1 {
+  background-color: $bgColorType01;
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid $borderColorType01 !important;
+  .el-dropdown-menu__item {
+    background-color: #1f2128 !important;
+    color: #fff;
+    transition: all 0.2s linear 0s;
+    &:before {
+      content: "";
+      font-family: FontAwesome;
+      position: relative;
+      top: 0;
+      left: 0px;
+      height: 100%;
+      width: 0px;
+      background-color: rgb(24 30 61);
+      border-radius: 0 50% 50% 0;
+      transform: scale(0, 0);
+      transform-origin: left center;
+      transition: all 0.1s linear 0s;
+    }
+    div:first-child {
+      display: flex;
+      transition: all 0.2s linear 0s;
+    }
+    &:hover {
+      // text-indent: 10px;
+      color: var(--el-dropdown-menuItem-hover-color);
+      // div:first-child {
+      //   margin-left: 10px !important;
+      // }
+      &:before {
+        content: "\f105";
+        transform: scale(1, 1);
+        // text-indent: 0;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+// end: el-dropdown-menu ----------------------------------------
+
+// el-sub-menu ----------------------------------------
+.submenu-style01.el-menu--horizontal {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #161719;
+  // border-bottom: none;
+  .el-menu--popup {
+    background-color: $bgSubMenu !important;
+    // padding: 5px 0px;
+    .el-menu-item {
+      background-color: $bgSubMenu !important;
+      &:hover {
+        background-color: #2c2f36 !important;
+      }
+    }
+  }
+}
+// end: el-sub-menu ----------------------------------------
+
+// el-dialog ----------------------------------------
+.el-dialog.dialog-type1 {
+  background-color: #0f1845;
+  border: 2px solid #1c2862;
+  border-radius: 20px;
+  color: #fff;
+  .el-dialog__title {
+    color: #fff;
+  }
+}
+.el-dialog.dialog-type2 {
+  background-color: #0f1845;
+  border: 2px solid #1c2862;
+  border-radius: 20px;
+  color: #fff;
+  .el-dialog__title {
+    color: #fff;
+  }
+}
+.el-dialog {
+  // sử dụng "v-loading" trên các element bên trong el-dialog
+  .el-loading-mask {
+    background-color: rgb(0 0 0 / 0%);
+  }
+}
+// end: el-dialog ----------------------------------------
+
+// el-button ----------------------------------------
+// button linear gradient
+.el-button.button-type1 {
+  background: linear-gradient(
+    94.9deg,
+    #00f6ff 0%,
+    #5d7eff 48.44%,
+    #5429a0 100%
+  );
+  border-radius: 56px;
+  border: none;
+  transition: 0.5s ease-out;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+.border-linear01 {
+  background-image: linear-gradient(to right, #00f6ff, #5d7eff, #a370ff);
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  text-align: center;
+  position: relative;
+  z-index: 200;
+  align-items: center;
+  &:before {
+    content: "";
+    background-image: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    opacity: 0;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    // -webkit-backdrop-filter: blur(4px);
+    // backdrop-filter: blur(4px);
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 20px;
+  }
+  &:active {
+    color: #000;
+  }
+  &:active:after {
+    background: transparent;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+  &.disabled {
+    background-image: linear-gradient(to right, #0d898d, #3952b4, #834de4);
+    &:hover:before {
+      opacity: 0;
+    }
+  }
+}
+.border-linear01 .el-button.button-type02 {
+  background-color: #293366;
+  border: none;
+  color: #fff;
+}
+.border-linear01 {
+  .el-button.is-disabled,
+  .el-button.is-disabled:hover,
+  .el-button.is-disabled:focus {
+    color: var(--el-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: #293366;
+  }
+}
+.border-linear01 .el-button.button-type03 {
+  background-color: #171b33;
+  border: none;
+  color: #fff;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+/**
+button animation auto run
+*/
+.border-linear01.auto-run {
+  .el-button--large.is-round {
+    padding: unset;
+  }
+  &:before {
+    opacity: 1;
+  }
+  .el-button.button-type03 {
+    opacity: 0.8;
+  }
+}
+// end: el-button ----------------------------------------
+
+// keyframes ----------------------------------------
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+// sử dụng cho: button,...
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+// end: keyframes ----------------------------------------
+
+// button connect wallet------------------------------------------------
+.el-button.btn-connect-wallet {
+  margin-top: 10px;
+  background: rgba(18, 100, 242, 0.1);
+  color: #5190ff;
+  border: 1px solid #1264f2;
+  border-radius: 10px;
+  transition: all 0.5s;
+
+  &:hover {
+    border: 1px solid #1264f2;
+    color: #74a7ff;
+    background-color: #1264f2;
+    color: #fff;
+  }
+
+  &:active {
+    border: 1px solid #1264f2;
+    color: #74a7ff;
+    background-color: #1264f2;
+    color: #fff;
+  }
+
+  &:focus {
+    border: 1px solid #1264f2;
+    color: #74a7ff;
+    background-color: #1264f2;
+    color: #fff;
+  }
+}
+// end button connect wallet--------------------------------------------
+
+// el-image ----------------------------------------
+.el-image {
+  .loader01 {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    perspective: 800px;
+    .inner {
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    .inner.one {
+      left: 0%;
+      top: 0%;
+      animation: rotate-one 1s linear infinite;
+      border-bottom: 3px solid #efeffa;
+    }
+    .inner.two {
+      right: 0%;
+      top: 0%;
+      animation: rotate-two 1s linear infinite;
+      border-right: 3px solid #efeffa;
+    }
+    .inner.three {
+      right: 0%;
+      bottom: 0%;
+      animation: rotate-three 1s linear infinite;
+      border-top: 3px solid #efeffa;
+    }
+  }
+  .el-image__error {
+    background-color: #f5f7fa08;
+  }
+}
+// end: el-image ----------------------------------------
+
+// el-link ----------------------------------------
+.el-link.link-type01 {
+  font-weight: lighter;
+  color: #b2c8f4;
+  &:hover {
+    color: #4999ff;
+  }
+}
+// end: el-link ----------------------------------------
+
+// el-dropwdown addressDropdown --------------------------------
+// (shoud be use popper-class="addressDropdown-arrow")
+.addressDropdown-arrow {
+  .el-popper__arrow::before {
+    border-bottom-color: #0000008f;
+    border-right-color: #0000008f;
+    background: #384482 !important;
+    border-color: #384482 !important;
+  }
+}
+// end: addressDropdown --------------------------------
+
+// tab ------------------------------------------------
+.el-tabs.tabs-type01 {
+  .el-tabs__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .el-tabs__nav-scroll {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+  }
+
+  .el-tabs__nav-scroll .el-tabs__item.is-active {
+    color: #1fbfbf;
+  }
+
+  .el-tabs__nav-scroll .el-tabs__active-bar {
+    background-color: #1fbfbf;
+  }
+
+  .el-tabs__nav-scroll .el-tabs__item:hover {
+    color: #1fbfbf;
+  }
+
+  .el-tabs__header .el-tabs__nav-wrap::after {
+    background-color: #525c9a;
+  }
+  .el-tabs__content {
+    margin: 20px 0px;
+  }
+
+  .el-tabs__item {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+// end: tab -------------------------------------------

@@ -1,0 +1,92 @@
+{
+    "main":
+    [
+        {
+            "name": "Vechain",
+            "address": "0x0000000000000000000000000000000000000000",
+            "symbol": "VET",
+            "decimals": 18,
+            "logoURI": "./img/tokens/vet.svg"
+        },
+        {
+            "name": "VeThor",
+            "address": "0x0000000000000000000000000000456E65726779",
+            "symbol": "VTHO",
+            "decimals": 18,
+            "logoURI": "./img/tokens/vtho.svg"
+        },
+        {
+            "name": "VeUSD",
+            "address": "0x4E17357053dA4b473e2daa2c65C2c949545724b8",
+            "symbol": "VEUSD",
+            "decimals": 6,
+            "logoURI": "https://vechain.github.io/token-registry/assets/6264aec1716bb13dc8f0d4044d3e986678c553f0.png"
+        },
+        {
+            "name": "VPunks Token",
+            "address": "0xb0821559723dB89e0Bd14FEE81E13a3aaE007e65",
+            "symbol": "VPU",
+            "decimals": 18,
+            "logoURI": "./img/tokens/vpu.png"
+        },
+        {
+            "name": "VeSea Token",
+            "address": "0x23368c20c16f64ecbb30164a08666867be22f216",
+            "symbol": "VSEA",
+            "decimals": 18,
+            "logoURI": "https://vechain.github.io/token-registry/assets/47eed6b5ea59d255140603b2ddb41ff2fc64d214.png"
+        }
+    ],
+    "test":
+    [
+        {
+            "name": "Vechain",
+            "address": "0x47a7a149e22f1556de85f9144332de45b371be5f",
+            "symbol": "VET",
+            "decimals": 18,
+            "logoURI": "./img/tokens/vet.svg"
+        },
+        {
+            "name": "VeThor",
+            "address": "0x0000000000000000000000000000456E65726779",
+            "symbol": "VTHO",
+            "decimals": 18,
+            "logoURI": "./img/tokens/vtho.svg"
+        },
+        {
+            "name": "VPunks Token",
+            "address": "0x8C1d95e96b69941b1b81145D2f2A100E7D259880",
+            "symbol": "VPU",
+            "decimals": 18,
+            "logoURI": "./img/tokens/vpu.png"
+        },
+        {
+            "name": "T01 Token",
+            "address": "0xC2e176E90B995cDfd29B8c5152B4E4fE768556C0",
+            "symbol": "T01",
+            "decimals": 18,
+            "logoURI": "./img/tokens/T01.png"
+        },
+        {
+            "name": "T02 Token",
+            "address": "0x994aa0547ae6FF294Af26fa3639AB39362308F1B",
+            "symbol": "T02",
+            "decimals": 16,
+            "logoURI": "./img/tokens/T02.png"
+        },
+        {
+            "name": "T03 Token",
+            "address": "0x80e378067467E3398241Bb44D864Ec5fBA73E15B",
+            "symbol": "T03",
+            "decimals": 14,
+            "logoURI": "./img/tokens/T03.png"
+        },
+        {
+            "name": "T04 Token",
+            "address": "0xAdf76422a8AEa4bd98203D7051Dade16E7b7C23b",
+            "symbol": "T04",
+            "decimals": 12,
+            "logoURI": "./img/tokens/T04.png"
+        }
+    ]
+}

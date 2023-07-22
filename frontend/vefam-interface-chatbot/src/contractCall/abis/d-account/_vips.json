@@ -1,0 +1,55 @@
+{
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "_vips",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "name",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint8",
+        "name": "nameCount",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "laff",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referReward",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "claimReward",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lv1Count",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lv2Count",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+}

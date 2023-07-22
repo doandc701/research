@@ -1,0 +1,13 @@
+{
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "newCode",
+        "type": "bytes32"
+      }
+    ],
+    "name": "changeCode",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}

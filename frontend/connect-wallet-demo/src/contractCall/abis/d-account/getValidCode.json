@@ -1,0 +1,20 @@
+{
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "codeString",
+        "type": "string"
+      }
+    ],
+    "name": "getValidCode",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+}

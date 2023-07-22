@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "img": "vpunks-arena.jpg",
+    "name": "VPunks",
+    "codename": "vpunks",
+    "collections": 1,
+    "games": 2,
+    "website": "https://vpunks.com/"
+  },
+  {
+    "id": 1,
+    "img": "pixel-puffs.jpg",
+    "name": "Pixel Puffs",
+    "codename": "pixel-puffs",
+    "collections": 1,
+    "games": 0,
+    "website": "https://vefam.com/projects/pixel-puffs/"
+  }
+]

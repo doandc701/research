@@ -1,0 +1,15 @@
+{
+  "basic": {
+    "text": "Basic",
+    "children": [
+      {
+        "link": "/vpunks",
+        "text": "Vpunks"
+      },
+      {
+        "link": "/border",
+        "text": "Border"
+      }
+    ]
+  }
+}

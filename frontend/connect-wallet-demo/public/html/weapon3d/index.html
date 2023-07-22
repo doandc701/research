@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>3D Viewing</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background-color: #323232;
+    }
+
+    .container {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <body>
+    <div id="container" class="container">
+      <!-- <p id="demo"></p> -->
+      <model-viewer
+        id="aa"
+        load="assetLoaded"
+        camera-controls
+        touch-action="pan-y"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        shadow-intensity="1"
+        src="weapons/axe lv1.glb"
+        alt="Vpunks Arena Weapon 3D"
+      >
+      </model-viewer>
+      <!-- <script type="module" src="js/model-viewer.min.js"></script> -->
+    </div>
+  </body>
+  <script>
+    function getBrowser() {
+      let browser = navigator.userAgent;
+      if (browser.indexOf("Sync") >= 0) {
+        browser = "Sync";
+      } else {
+        browser = "UNKNOWN";
+      }
+      return browser;
+    }
+
+    // xử lý phiên bản để hỗ trợ Sync1 (Append sẽ có lỗi nên xóa export [line cuối])
+    const script = document.createElement("script");
+    if (getBrowser() === "Sync") {
+      script.src = "js/model-viewer@1.10.1.min.js";
+      // error library: Uncaught SyntaxError: Unexpected token 'export' ;export{Ev as ModelViewerElement}; 
+    } else {
+      script.src = "js/model-viewer@2.1.1.min.js";
+      // error library: Uncaught SyntaxError: Unexpected token 'export' ;export{Ev as ModelViewerElement};
+    }
+    document.head.append(script);
+
+    //
+    function loaded() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const name = urlParams.get("name");
+      // console.log("name", name);
+
+      if (name) {
+        document.getElementById(
+          "container"
+        ).innerHTML = `<model-viewer id="demo" load="assetLoaded()" camera-controls auto-rotate data-js-focus-visible
+            src="weapons/${name}.glb" alt="3D Item">
+            </model-viewer>`;
+        const modelViewer = document.getElementById("demo");
+        modelViewer.addEventListener("load", function (evt) {
+          // console.log("load", evt);
+          window.parent.postMessage({ event: "model-loaded" }, `${window.location.href}`);
+        });
+        // modelViewer.addEventListener("error", function (evt) {
+        //   // console.log("9898989898", evt);
+        // });
+      } else {
+        // alert("err");
+      }
+    }
+    window.addEventListener("loaded", loaded());
+  </script>
+</html>

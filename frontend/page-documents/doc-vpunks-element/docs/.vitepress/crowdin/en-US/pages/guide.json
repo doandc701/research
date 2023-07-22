@@ -1,0 +1,70 @@
+{
+  "welcome": {
+    "text": "👋 Welcome to the VPunks project!",
+    "children": [
+      {
+        "text": "Overview",
+        "link": "/guide/overview"
+      }
+    ]
+  },
+  "game": {
+    "text": "Games",
+    "children": [
+      {
+        "text": "📎 How to play VPunks Game",
+        "link": "/guide/how-to-play-vpunks-game"
+      },
+      {
+        "text": "🧟♂ Zombie Defense",
+        "link": "/guide/zombie-defense"
+      },
+      {
+        "text": "⚔ VPunks Arena",
+        "link": "/guide/vpunks-arena"
+      },
+      {
+        "text": "✌ VPunks RPS",
+        "link": "/guide/vpunks-rps"
+      }
+    ]
+  },
+  "resources": {
+    "text": "Resources",
+    "children": [
+      {
+        "text": "# 🛣 Roadmap",
+        "link": "/guide/roadmap"
+      },
+      {
+        "text": "🪙 Tokenomics",
+        "link": "/guide/tokenomics"
+      },
+      {
+        "text": "🖱 Smart Contracts",
+        "link": "/guide/smart-contracts"
+      },
+      {
+        "text": "🔗 Official Links",
+        "link": "/guide/official-links"
+      },
+      {
+        "text": "☎ Contact us",
+        "link": "/guide/contact-us"
+      }
+    ]
+  },
+  "other collections": {
+    "text": "Other Collections",
+    "children": [
+      {
+        "text": "🤺 VPunks 3D",
+        "link": "/guide/vpunks-3d"
+      },
+      {
+        "text": "🗡 VPunks Weapons",
+        "link": "/guide/vpunks-weapons"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      }
+    ],
+    "name": "getVIPInfosxAddress",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "name",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "laffID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "laff_laffID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "referReward",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "claimReward",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lv1Count",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "lv2Count",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+}

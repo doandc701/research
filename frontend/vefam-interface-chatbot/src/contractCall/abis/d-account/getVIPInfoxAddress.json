@@ -1,0 +1,25 @@
+{
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      }
+    ],
+    "name": "getVIPInfoxAddress",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "laffID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "laff_laffID",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+}

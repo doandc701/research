@@ -1,0 +1,13 @@
+{
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "codeString",
+        "type": "string"
+      }
+    ],
+    "name": "linkAccount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}

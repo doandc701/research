@@ -1,0 +1,24 @@
+{
+    "inputs": [
+        {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+        },
+        {
+        "internalType": "uint256",
+        "name": "numberOfNfts",
+        "type": "uint256"
+        },
+        {
+        "internalType": "uint16[]",
+        "name": "ids",
+        "type": "uint16[]"
+        }
+    ],
+    "name": "mintNFT",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function",
+    "payable": true
+}

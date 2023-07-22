@@ -1,0 +1,35 @@
+{
+    "inputs": [
+        {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+        },
+        {
+        "internalType": "uint256",
+        "name": "numberOfNfts",
+        "type": "uint256"
+        }
+    ],
+    "name": "getMintfee",
+    "outputs": [
+        {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+        },
+        {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+        },
+        {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+}

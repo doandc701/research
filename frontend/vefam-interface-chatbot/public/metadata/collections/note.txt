@@ -1,0 +1,5 @@
+- các file .json chỉ sử dụng khi không có các file .csv
+
+- vpunks-og-01.csv: default
+- vpunks-og-02.csv: thêm Rank column
+- vpunks-og.csv: main, bỏ "NONE"

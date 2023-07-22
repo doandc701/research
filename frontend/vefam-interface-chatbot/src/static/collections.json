@@ -1,0 +1,113 @@
+[
+  {
+    "id": 0,
+    "name": "VPunks OG",
+    "project": "VPunks",
+    "codename": "vpunks-og",
+    "address": "0xe92FDDD633008C1bca6E738725d2190cD46DF4a1",
+    "img": "vpunks-og.png",
+    "avatar": "vpunks-logo-200x200.png",
+    "collections": 2,
+    "games": 2,
+    "standard": "VIP-181",
+    "website": "https://vpunks.com/",
+    "items": "10000",
+    "about": "VPunks are a collection of 10,000 unique digital assets nested within a gaming ecosystem. VPunks NFTs are utility-driven, offering staking and P2E gaming rewards in the ecosystem's native $VPU token.",
+    "meta_data": {
+      "type": "csv",
+      "general": ["Punk Type", "Full Type", "Attribute Count"],
+      "attributes": [
+        "Hair",
+        "Eyes",
+        "Facial Hair",
+        "Blemishes",
+        "Neck Accessory",
+        "Mouth Prop",
+        "Mouth",
+        "Nose",
+        "Ears"
+      ]
+    },
+    "item_name": "VPunks OG",
+    "item_image": {
+      "base_url": "https://vpunks.com/images/vpunks/punk",
+      "file_extension": "png",
+      "min_length": 4
+    }
+  },
+  {
+    "id": 1,
+    "name": "Pixel Puffs",
+    "codename": "pixel-puffs",
+    "address": "0xEdd8acC6F79330195DA827e4693d1f877e4502Cb",
+    "project": "Pixel Puffs",
+    "img": "pixel-puffs.png",
+    "avatar": "puff0000.png",
+    "collections": 1,
+    "games": 0,
+    "standard": "VIP-181",
+    "website": "https://vefam.com/projects/pixel-puffs/",
+    "items": "1096",
+    "about": "Pixel Puffs is a collection of funny pixel images designed by an anonymous designer who authorized VeFam to release to users forever. VeFam are responsible for using these assets to develop games and gadgets for owners of Pixel Puffs NFT.",
+    "meta_data": {
+      "type": "csv",
+      "general": [],
+      "attributes": ["Background", "Body", "Backpack", "Shield", "Weapon", "Mouth", "Eyes", "Headpiece"]
+    },
+    "item_name": "Pixel Puffs",
+    "item_image": {
+      "base_url": "https://vefam.com/projects/pixel-puffs/images/",
+      "file_extension": "png",
+      "min_length": 0
+    }
+  },
+  {
+    "id": 2,
+    "name": "VPunks Weapons",
+    "project": "VPunks",
+    "codename": "vpunks-weapons",
+    "address": "0x1417e8955D16775B22771402E3F43665b5070975",
+    "img": "vpunks-weapons.png",
+    "avatar": "vpunks-weapons-200x200.jpg",
+    "collections": 2,
+    "games": 2,
+    "standard": "VIP-210",
+    "is_3d": true,
+    "website": "https://vpunks.com/#/collections/weapons",
+    "items": "15",
+    "about": "Vpunks Weapons is a collection of the Vpunks project, weapons used in 3D PvP and P2E games!!!",
+    "meta_data": {
+      "type": "json",
+      "general": [],
+      "attributes": []
+    },
+    "item_image": {
+      "base_url": "images/collections/vpunks-weapons/"
+    }
+  },
+  {
+    "id": 3,
+    "name": "VEmoji",
+    "project": "VeFam",
+    "codename": "vemoji",
+    "address": "0x3aDc46f41467d436614B173A076791dEAdDBD67f",
+    "img": "vemoji.png",
+    "avatar": "vemoji-logo-512x512.png",
+    "collections": 1,
+    "games": 0,
+    "standard": "VIP-210",
+    "website": "https://vemoji.io",
+    "items": "510",
+    "about": "Vemoji is the first EMOJI VIP-210 NFT collection on VeChain Thor blockchain, VIP-210 is equivalent to ERC1155 in VeChain ecosystem. VEmoji only displays emojis according to the unicode standard, display may be different on different browsers.",
+    "meta_data": {
+      "type": "json",
+      "general": [],
+      "attributes": []
+    },
+    "item_name": "VEmoji",
+    "item_image": {
+      "base_url": "",
+      "file_extension": "emoji"
+    }
+  }
+]

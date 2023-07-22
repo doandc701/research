@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Vpunks",
+    "id": 0,
+    "codename": "vpunks-og",
+    "standard": "Vpunks",
+    "baseUrl": "https://vpunks.com/images/",
+    "items": [
+      {
+        "id": 0,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "10"
+      },
+      {
+        "id": 1,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "20"
+      },
+      {
+        "id": 2,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "30"
+      },
+      {
+        "id": 3,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "40"
+      },
+      {
+        "id": 4,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "50"
+      },
+      {
+        "id": 5,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "60"
+      },
+      {
+        "id": 6,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "70"
+      },
+      {
+        "id": 7,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "80"
+      },
+      {
+        "id": 8,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "90"
+      },
+      {
+        "id": 9,
+        "attributes": {
+          "Rank": "value1",
+          "Element": "value2"
+        },
+        "rank": "100"
+      }
+    ]
+  }
+]

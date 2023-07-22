@@ -1,0 +1,25 @@
+{
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "tokenAddresses",
+        "type": "address[]"
+      }
+    ],
+    "name": "supportedPayments",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "minAmounts",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "bool[]",
+        "name": "enables",
+        "type": "bool[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+}
