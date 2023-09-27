@@ -1,0 +1,18 @@
+[
+    {
+      "id": 0,
+      "img": "zombie-defense.jpg",
+      "name": "Zombie Defense",
+      "project": "VPunks",
+      "scores": "10/100",
+      "tags": ["P2E"]
+    },
+    {
+      "id": 1,
+      "img": "vpunks-arena.jpg",
+      "name": "VPunks Arena",
+      "project": "VPunks",
+      "scores": "40/100",
+      "tags": ["P2E", "PvP"]
+    }
+]

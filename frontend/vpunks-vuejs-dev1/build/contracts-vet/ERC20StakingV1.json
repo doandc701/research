@@ -1,0 +1,822 @@
+{
+  "contractName": "ERC20StakingV1",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "stakeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        }
+      ],
+      "name": "ForceWithdrawn",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "stakeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "duration",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        }
+      ],
+      "name": "Staked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "stakeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        }
+      ],
+      "name": "Withdrawn",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "erc20InfoMap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "remainingStaking",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "remainingReward",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "stakeIdCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "stakeIdToDetails",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startedAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint128",
+          "name": "stakeAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "rewardAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "duration",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "name": "stakingPoolDeeps",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "totalStaking",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "totalReward",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "remainingStaking",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "remainingStakeId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bool",
+          "name": "isPaused",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "stakingPoolIds",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "name": "stakingPools",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "erc20",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startedAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint128",
+          "name": "commitReward",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "minAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "maxAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "minDuration",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "maxDuration",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "minAPY",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "maxAPY",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "totalStakeId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "duration",
+          "type": "uint32"
+        }
+      ],
+      "name": "stake",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint128",
+          "name": "stakeId",
+          "type": "uint128"
+        }
+      ],
+      "name": "withdrawStake",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalStakingPool",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "indexs",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "poolIdAndActiveByIndexs",
+      "outputs": [
+        {
+          "internalType": "uint32[]",
+          "name": "poolIds",
+          "type": "uint32[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "actives",
+          "type": "bool[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32[]",
+          "name": "poolIds",
+          "type": "uint32[]"
+        }
+      ],
+      "name": "checkIsActiveByPoolIds",
+      "outputs": [
+        {
+          "internalType": "bool[]",
+          "name": "results",
+          "type": "bool[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "duration",
+          "type": "uint32"
+        }
+      ],
+      "name": "rewardCalculation",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "reward",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "apy",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "totalStakingOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "indexs",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "stakeIdsByIndexOf",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "stakeIds",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "indexs",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "stakingsByIndexOf",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "erc20s",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "startedAts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint128[]",
+          "name": "stakeAmounts",
+          "type": "uint128[]"
+        },
+        {
+          "internalType": "uint128[]",
+          "name": "rewardAmounts",
+          "type": "uint128[]"
+        },
+        {
+          "internalType": "uint32[]",
+          "name": "durations",
+          "type": "uint32[]"
+        },
+        {
+          "internalType": "uint32[]",
+          "name": "poolIds",
+          "type": "uint32[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "stakeIds",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "stakeIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "stakingsByStakeIds",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "erc20s",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "startedAts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint128[]",
+          "name": "stakeAmounts",
+          "type": "uint128[]"
+        },
+        {
+          "internalType": "uint128[]",
+          "name": "rewardAmounts",
+          "type": "uint128[]"
+        },
+        {
+          "internalType": "uint32[]",
+          "name": "durations",
+          "type": "uint32[]"
+        },
+        {
+          "internalType": "uint32[]",
+          "name": "poolIds",
+          "type": "uint32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "pause",
+          "type": "bool"
+        }
+      ],
+      "name": "setPause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "erc20",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startedAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint128",
+          "name": "commitReward",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "minAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "maxAmount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint32",
+          "name": "minDuration",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "maxDuration",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "minAPY",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "maxAPY",
+          "type": "uint32"
+        }
+      ],
+      "name": "createStakingPool",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "poolId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bool",
+          "name": "pause",
+          "type": "bool"
+        }
+      ],
+      "name": "setPoolPause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint128",
+          "name": "stakeId",
+          "type": "uint128"
+        }
+      ],
+      "name": "adminUnstake",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerWithdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "networks": {
+    "5777": {
+      "address": "0x19a5c5dE9cADdA99f59D4C5D225e7cF0De5b2f3C",
+      "transactionHash": "0xe7f68ca97387b03f9000500598958804a835e58ce5722ef0bcb988223f1440d6"
+    }
+  },
+  "updatedAt": "2021-11-28T19:08:47.908Z"
+}

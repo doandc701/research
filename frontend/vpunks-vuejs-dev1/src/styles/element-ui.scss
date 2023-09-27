@@ -1,0 +1,275 @@
+// cover some element-ui styles
+.el-loading-mask {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+// el-dialog ----------------------------------------
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  background-color: #28407e;
+  color: #ffff;
+  outline: 2px solid #39549c;
+  border-radius: 10px;
+}
+.el-dialog__title {
+  font-size: 20px; // support for the Jura font
+  color: #ffffff;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  color: #ffffff;
+}
+.el-dialog__body {
+  color: #fff;
+  font-size: 16px; // support for the Jura font
+}
+// end: el-dialog ----------------------------------------
+
+// el-tabs ----------------------------------------
+.el-tabs__item {
+  font-size: 16px; // support for the Jura font
+  color: #fff;
+}
+
+// el-form ----------------------------------------
+.el-form-item__label {
+  font-size: 15px; // support for the Jura font
+  color: #fff;
+}
+.el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before, .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap > .el-form-item__label:before {
+  color: #ff0000;
+  font-size: 24px; // support for the Jura font
+}
+
+// el-table ----------------------------------------
+.el-table {
+  background-color: unset;
+  font-size: 15px;
+  color: #fff;
+  tr {
+    background-color: unset;
+  }
+  th {
+    background-color: #00000026;
+  }
+  th.is-leaf, td {
+    border-bottom: 1px solid #00000050;
+  }
+  thead {
+    color: #ffffff;
+  }
+}
+.el-table th > .cell {
+  word-break: break-word;
+}
+.el-table--group, .el-table--border {
+  border-top: 1px solid #00000050;
+  border-left: 1px solid #00000050;
+}
+.el-table--border th, .el-table--border td {
+  border-right: 1px solid #00000050;
+}
+.el-table--border th.gutter:last-of-type {
+  // border-bottom: 1px solid #00000050;
+}
+.el-table::before, .el-table--group::after, .el-table--border::after {
+  background-color: #00000050;
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #0000001c;
+}
+.el-table__body tr.current-row > td {
+  background-color: #0000001c;
+}
+.el-table__empty-text {
+  color: #ffffff90;
+}
+// end: el-table ----------------------------------------
+
+// el-input ----------------------------------------
+.el-input__inner {
+  font-size: 15px; // support for the Jura font
+  font-weight: 600;
+  background: #00000045;
+  border: 1px solid #00000042;
+  color: #ffffffbf;
+}
+.el-input__inner:hover {
+  border-color: #ffffff82;
+}
+.el-input-group__append, .el-input-group__prepend {
+  background-color: #00000026;
+  color: #ffffffc4;
+  border: 1px solid #00000059;
+}
+.el-input-group__append:hover, .el-input-group__prepend:hover {
+  background-color: #00000016;
+}
+// end: el-input ----------------------------------------
+
+// el-button ----------------------------------------
+// support for the Jura font
+.el-button {
+  font-size: 16px;
+  font-weight: 500;
+}
+.el-button--medium {
+  font-size: 15px;
+}
+.el-button--small {
+  font-size: 13px;
+}
+.el-button--mini {
+  font-size: 13px;
+}
+// end: support for the Jura font
+
+.el-button--primary.is-plain {
+  color: #0078e8;
+  background: #b2c8dd;
+}
+.el-button--info {
+  color: #f8f8f8;
+  background-color: #5c6987;
+  border-color: #5a606c;
+}
+.el-button--info:hover, .el-button--info:focus {
+  background: #7e838b;
+  border-color: #94a7c0;
+  color: #f8f8f8;
+}
+// end: el-button ----------------------------------------
+
+// el-link ----------------------------------------
+.el-link {
+  font-size: 15px; // support for the Jura font
+}
+.el-link.el-link--default {
+  color: #dadada;
+}
+
+// el-pagination ----------------------------------------
+.el-pagination span:not([class*=suffix]), .el-pagination button {
+  font-size: 14px; // support for the Jura font
+}
+.el-pager li {
+  font-size: 14px; // support for the Jura font
+}
+
+// el-upload ----------------------------------------
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+.el-upload__input {
+  display: none;
+}
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+// end: el-upload ----------------------------------------
+
+// el-breadcrumb ----------------------------------------
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: initial;
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+// el-image ----------------------------------------
+.el-image {
+  .image-slot {
+    height: 100%;
+    display: flex;
+    background: #f5f7fa08;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .el-image__error {
+    background: #f5f7fa08;
+  }
+}
+
+// other ----------------------------------------
+.el-loading-spinner {
+  top: min(50%, 300px);
+}
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    min-width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// el-dropdown ---------- & arrow
+.el-dropdown-menu {
+  background-color: rgb(32, 36, 64) !important;
+  border-color: rgb(74, 84, 149) !important;
+  color: #fff !important;
+  border-radius: 10px;
+  .popper__arrow::after {
+    // top: 1px;
+    // margin-left: -6px;
+    // border-top-width: 0;
+    border-bottom-color: rgb(32, 36, 64) !important;
+  }
+  .popper__arrow {
+      border-bottom-color: rgb(74, 84, 149) !important;
+  }
+}
+// ----------------------------------------------------------------

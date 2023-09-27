@@ -1,0 +1,626 @@
+{
+  "contractName": "Energy",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"Energy represents the sub-token in VeChainThor which conforms VIP180(ERC20) standard. The name of token is \\\"VeThor\\\" and 1 THOR equals to 1e18 wei. The main function of VeThor is to pay for the transaction fee.  VeThor is generated from VET, so the initial supply of VeThor is zero in the genesis block. The growth rate of VeThor is 5000000000 wei per token(VET) per second, that is to say 1 VET will produce about 0.000432 THOR per day. The miner will charge 30 percent of transation fee and 70 percent will be burned. So the total supply of VeThor is dynamic.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"transfer(address,uint256)\":{\"notice\":\"transfer '_amount' of VeThor from msg sender to account '_to'\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Working/Blockchain/Vechain/0_tvt/Vpunks/contracts/energy.sol\":\"Energy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Working/Blockchain/Vechain/0_tvt/Vpunks/contracts/energy.sol\":{\"keccak256\":\"0x8c1806343321ba2547f997080cc9d386a5a98504d20343de4b15f613d8817a82\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c9d995bb495b30cb35437a3443af115bd1dac2bfc476ea577e93ae75cab4f011\",\"dweb:/ipfs/QmZboomrAbbh1p7TXWmBj5nCikx7AJdfkbWGEo84A7cDmp\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.6.0 <0.8.0;\n\n/// @title Energy represents the sub-token in VeChainThor which conforms VIP180(ERC20) standard.\n/// The name of token is \"VeThor\" and 1 THOR equals to 1e18 wei. The main function of VeThor is to pay for the transaction fee. \n/// VeThor is generated from VET, so the initial supply of VeThor is zero in the genesis block.\n/// The growth rate of VeThor is 5000000000 wei per token(VET) per second, that is to say 1 VET will produce about 0.000432 THOR per day.\n/// The miner will charge 30 percent of transation fee and 70 percent will be burned. So the total supply of VeThor is dynamic.\n\ninterface Energy {\n    /*\n    //// @return TOKEN name: \"VeThor\".\n    function name() external pure returns (string memory);\n\n    /// @notice 1e18 wei is equal to 1 THOR\n    /// @return 18\n    function decimals() external pure returns (uint8);\n\n    /// @return \"VTHO\"\n    function symbol() external pure returns (string memory);\n\n    /// @return total supply of VeThor\n    function totalSupply() external view returns (uint256);\n\n    /// @return total amount of burned VeThor\n    function totalBurned() external view returns(uint256);\n\n    /// @notice It's not a VIP180(ERC20)'s standard method.\n    /// transfer '_amount' of VeThor from account '_from' to account '_to'\n    /// If account '_from' is an external account, '_from' must be the msg sender, or\n    /// if account '_from' is a contract account, msg sender must be the master of contract '_from'.\n    function move(address _from, address _to, uint256 _amount) external returns (bool success);\n\n    /// @notice It's a VIP180(ERC20)'s standard method.\n    function transferFrom(address _from, address _to, uint256 _amount) external returns(bool success);\n\n    /// @notice It's a VIP180(ERC20)'s standard method.\n    /// @return the remaining amount of VeThor that the '_spender' is able to withdraw from '_owner'.\n    function allowance(address _owner, address _spender)  external view returns (uint256 remaining);\n\n    /// @notice It's a VIP180(ERC20)'s standard method which means approving a '_value' to be transferred to _spender from msg sender.\n    function approve(address _spender, uint256 _value) external returns (bool success);\n    */\n    ///\n    function balanceOf(address _owner) external view returns (uint256 balance);\n\n    /// @notice transfer '_amount' of VeThor from msg sender to account '_to'\n    function transfer(address _to, uint256 _amount) external returns (bool success);\n}\n",
+  "sourcePath": "C:\\Working\\Blockchain\\Vechain\\0_tvt\\Vpunks\\contracts\\energy.sol",
+  "ast": {
+    "absolutePath": "/C/Working/Blockchain/Vechain/0_tvt/Vpunks/contracts/energy.sol",
+    "exportedSymbols": {
+      "Energy": [
+        152
+      ]
+    },
+    "id": 153,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 133,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:31:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 134,
+          "nodeType": "StructuredDocumentation",
+          "src": "65:588:1",
+          "text": "@title Energy represents the sub-token in VeChainThor which conforms VIP180(ERC20) standard.\n The name of token is \"VeThor\" and 1 THOR equals to 1e18 wei. The main function of VeThor is to pay for the transaction fee. \n VeThor is generated from VET, so the initial supply of VeThor is zero in the genesis block.\n The growth rate of VeThor is 5000000000 wei per token(VET) per second, that is to say 1 VET will produce about 0.000432 THOR per day.\n The miner will charge 30 percent of transation fee and 70 percent will be burned. So the total supply of VeThor is dynamic."
+        },
+        "fullyImplemented": false,
+        "id": 152,
+        "linearizedBaseContracts": [
+          152
+        ],
+        "name": "Energy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "70a08231",
+            "id": 141,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 136,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 141,
+                  "src": "2289:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 135,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2289:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2288:16:1"
+            },
+            "returnParameters": {
+              "id": 140,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 139,
+                  "mutability": "mutable",
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 141,
+                  "src": "2328:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 138,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2328:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2327:17:1"
+            },
+            "scope": 152,
+            "src": "2270:75:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 142,
+              "nodeType": "StructuredDocumentation",
+              "src": "2351:73:1",
+              "text": "@notice transfer '_amount' of VeThor from msg sender to account '_to'"
+            },
+            "functionSelector": "a9059cbb",
+            "id": 151,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transfer",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 144,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 151,
+                  "src": "2447:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 143,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2447:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 146,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 151,
+                  "src": "2460:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 145,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2460:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2446:30:1"
+            },
+            "returnParameters": {
+              "id": 150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 149,
+                  "mutability": "mutable",
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 151,
+                  "src": "2495:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 148,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2495:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2494:14:1"
+            },
+            "scope": 152,
+            "src": "2429:80:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 153,
+        "src": "654:1857:1"
+      }
+    ],
+    "src": "32:2480:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Working/Blockchain/Vechain/0_tvt/Vpunks/contracts/energy.sol",
+      "exportedSymbols": {
+        "Energy": [
+          152
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".0",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 133,
+        "name": "PragmaDirective",
+        "src": "32:31:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            152
+          ],
+          "name": "Energy",
+          "scope": 153
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title Energy represents the sub-token in VeChainThor which conforms VIP180(ERC20) standard.\n The name of token is \"VeThor\" and 1 THOR equals to 1e18 wei. The main function of VeThor is to pay for the transaction fee. \n VeThor is generated from VET, so the initial supply of VeThor is zero in the genesis block.\n The growth rate of VeThor is 5000000000 wei per token(VET) per second, that is to say 1 VET will produce about 0.000432 THOR per day.\n The miner will charge 30 percent of transation fee and 70 percent will be burned. So the total supply of VeThor is dynamic."
+            },
+            "id": 134,
+            "name": "StructuredDocumentation",
+            "src": "65:588:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "70a08231",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "balanceOf",
+              "overrides": null,
+              "scope": 152,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_owner",
+                      "overrides": null,
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 135,
+                        "name": "ElementaryTypeName",
+                        "src": "2289:7:1"
+                      }
+                    ],
+                    "id": 136,
+                    "name": "VariableDeclaration",
+                    "src": "2289:14:1"
+                  }
+                ],
+                "id": 137,
+                "name": "ParameterList",
+                "src": "2288:16:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "balance",
+                      "overrides": null,
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 138,
+                        "name": "ElementaryTypeName",
+                        "src": "2328:7:1"
+                      }
+                    ],
+                    "id": 139,
+                    "name": "VariableDeclaration",
+                    "src": "2328:15:1"
+                  }
+                ],
+                "id": 140,
+                "name": "ParameterList",
+                "src": "2327:17:1"
+              }
+            ],
+            "id": 141,
+            "name": "FunctionDefinition",
+            "src": "2270:75:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "a9059cbb",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "transfer",
+              "overrides": null,
+              "scope": 152,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice transfer '_amount' of VeThor from msg sender to account '_to'"
+                },
+                "id": 142,
+                "name": "StructuredDocumentation",
+                "src": "2351:73:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_to",
+                      "overrides": null,
+                      "scope": 151,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 143,
+                        "name": "ElementaryTypeName",
+                        "src": "2447:7:1"
+                      }
+                    ],
+                    "id": 144,
+                    "name": "VariableDeclaration",
+                    "src": "2447:11:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_amount",
+                      "overrides": null,
+                      "scope": 151,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 145,
+                        "name": "ElementaryTypeName",
+                        "src": "2460:7:1"
+                      }
+                    ],
+                    "id": 146,
+                    "name": "VariableDeclaration",
+                    "src": "2460:15:1"
+                  }
+                ],
+                "id": 147,
+                "name": "ParameterList",
+                "src": "2446:30:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "success",
+                      "overrides": null,
+                      "scope": 151,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 148,
+                        "name": "ElementaryTypeName",
+                        "src": "2495:4:1"
+                      }
+                    ],
+                    "id": 149,
+                    "name": "VariableDeclaration",
+                    "src": "2495:12:1"
+                  }
+                ],
+                "id": 150,
+                "name": "ParameterList",
+                "src": "2494:14:1"
+              }
+            ],
+            "id": 151,
+            "name": "FunctionDefinition",
+            "src": "2429:80:1"
+          }
+        ],
+        "id": 152,
+        "name": "ContractDefinition",
+        "src": "654:1857:1"
+      }
+    ],
+    "id": 153,
+    "name": "SourceUnit",
+    "src": "32:2480:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.0+commit.9e61f92b.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-09-25T01:36:41.552Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "Energy represents the sub-token in VeChainThor which conforms VIP180(ERC20) standard. The name of token is \"VeThor\" and 1 THOR equals to 1e18 wei. The main function of VeThor is to pay for the transaction fee.  VeThor is generated from VET, so the initial supply of VeThor is zero in the genesis block. The growth rate of VeThor is 5000000000 wei per token(VET) per second, that is to say 1 VET will produce about 0.000432 THOR per day. The miner will charge 30 percent of transation fee and 70 percent will be burned. So the total supply of VeThor is dynamic.",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "transfer(address,uint256)": {
+        "notice": "transfer '_amount' of VeThor from msg sender to account '_to'"
+      }
+    },
+    "version": 1
+  }
+}

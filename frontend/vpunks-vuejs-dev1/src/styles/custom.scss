@@ -1,0 +1,36 @@
+@font-face {
+  font-family: PressStart2P;
+  src: url(../assets/fonts/PressStart2P-Regular.ttf);
+}
+.smart-app-container {
+  padding: 30px 30px 150px 30px;
+  padding-left: min(max(10px, 4vw), 30px);
+  padding-right: min(max(10px, 4vw), 30px);
+  min-height: calc(100vh - 50px);
+}
+.app-con-title {
+    margin: 20px 0;
+}
+
+// support for the Jura font
+button, input, optgroup, select, textarea {
+  font-family: 'Jura';
+}
+
+@media only screen and (min-width: 600px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: auto;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #445686; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #103260;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1a1c32;
+  }
+}
